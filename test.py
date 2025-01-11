@@ -16,7 +16,7 @@ dp = Dispatcher()
 @dp.message(Command('start'))
 async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup(keyboard=[
-        [KeyboardButton(text='Открыть веб-страницу', web_app=WebAppInfo(url='https://itproger.com'))]
+        [KeyboardButton(text='Открыть веб-страницу', web_app=WebAppInfo(url='https://mor9q.github.io/telegram-website-store/'))]
     ],
     resize_keyboard=True,
     one_time_keyboard=True
