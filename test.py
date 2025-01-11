@@ -15,12 +15,9 @@ dp = Dispatcher()
 
 @dp.message(Command('start'))
 async def start(message: types.Message):
-    markup = types.ReplyKeyboardMarkup(keyboard=[
-        [KeyboardButton(text='Открыть веб-страницу', web_app=WebAppInfo(url='https://mor9q.github.io/telegram-website-store/'))]
-    ],
-    resize_keyboard=True,
-    one_time_keyboard=True
-    )
+    markup = types.InlineKeyboardMarkup()
+    markup.add(InlineKeyboardButton(text='Открыть веб-страницу', url='https://mor9q.github.io/telegram-website-store/'))
+
     await message.answer('Привет мой друг!', reply_markup=markup)
 
 
